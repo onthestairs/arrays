@@ -1,44 +1,16 @@
 # Experimental!
 
 IsDigit ← ∈ "1234567890"
-NotSpecialChars ← "1234567890."
-IsSpecial ← ¬ ∈ NotSpecialChars
-SplitLines ← ⬚@ ⊜∘ ⊸≠@\n
-Pad ← ⍉ ⊂: @. ⊂ @. ⍉ ⊂: @. ⊂ @.
-PadZeroSides ← ⍉ ⊂: 0 ⊂ 0 ⍉
-PadMinusOneSides ← ⍉ ⊂: ¯1 ⊂ ¯1 ⍉
-Unpad ← ◌ °⊂
+IsSpecial ← ¬ ∈ "1234567890."
 
-&fras "./uiua/aoc/inputs/3.txt"
-SplitLines
+⬚@ ⊜∘ ⊸≠@\n &fras "./uiua/aoc/inputs/3.txt"
 ...
-Pad
-DigitAdjacentToSpecial ← ↧⊃(IsDigit ⊡ 1_1)(/↥/↥ ∵IsSpecial)
-≡≡DigitAdjacentToSpecial ◫ 3_3
-
-PadZeroSides
-◫ 1_3
-≡≡/↥≡≡/↥
-:
-IsDigit
-↧
-
-PadZeroSides
-◫ 1_3
-≡≡/↥≡≡/↥
-:
-IsDigit
-↧
-
-:
-
-∵⍣⋕ 0
-:
-⍥(-1×0)¬
-PadMinusOneSides
-♭
-⊜□ ≠¯1.
-
-DigitsToNumber ← /+×ⁿ:10⇌⇡⧻.
-♭≡⍜°□DigitsToNumber
-°□/+
+⍉ ⊂: @. ⊂ @. ⍉ ⊂: @. ⊂ @. # pad
+≡≡(↧⊃(IsDigit ⊡ 1_1)(/↥/↥ ∵IsSpecial)) ◫ 3_3
+⍉ ⊂: 0 ⊂ 0 ⍉ # pad with 0 on sides
+↧IsDigit:≡≡/↥≡≡/↥◫ 1_3
+⍉ ⊂: 0 ⊂ 0 ⍉ # pad with 0 on sides
+↧IsDigit:≡≡/↥≡≡/↥◫ 1_3
+⍥(-1×0)¬:∵⍣⋕ 0:
+⊜□ ≠¯1. ♭ ⍉ ⊂: ¯1 ⊂ ¯1 ⍉
+°□/+♭≡⍜°□(/+×ⁿ:10⇌⇡⧻.)
