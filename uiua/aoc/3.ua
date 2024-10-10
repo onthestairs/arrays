@@ -7,10 +7,9 @@ IsSpecial ← ¬ ∈ "1234567890."
 ...
 ⍉ ⊂: @. ⊂ @. ⍉ ⊂: @. ⊂ @. # pad
 ≡≡(↧⊃(IsDigit ⊡ 1_1)(/↥/↥ ∵IsSpecial)) ◫ 3_3
-⍉ ⊂: 0 ⊂ 0 ⍉ # pad with 0 on sides
-↧IsDigit:≡≡/↥≡≡/↥◫ 1_3
-⍉ ⊂: 0 ⊂ 0 ⍉ # pad with 0 on sides
-↧IsDigit:≡≡/↥≡≡/↥◫ 1_3
+Infect ← ↧IsDigit:≡≡/↥≡≡/↥◫ 1_3 ⍉⊂:0⊂0⍉
+Infect
+Infect
 ⍥(-1×0)¬:∵⍣⋕ 0:
 ⊜□ ≠¯1. ♭ ⍉ ⊂: ¯1 ⊂ ¯1 ⍉
 °□/+♭≡⍜°□(/+×ⁿ:10⇌⇡⧻.)
