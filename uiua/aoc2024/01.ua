@@ -7,7 +7,7 @@ Input ← (
 
 # part i
 Input
-/+≡⌵-∩⍆
+/+⌵-∩⍆
 
 # part ii
 Input
