@@ -1,15 +1,16 @@
 # Experimental!
 
-#  part i
-⊜∘ ⊸≠@\n &fras "./uiua/aoc2024/inputs/01.txt"
-∵⋕≡(⊜□ ⊸≠@ )
-⊏⊸⍏ ⊢.⍉
-⊏⊸⍏♭ ▽[0 1]:
-⊟
-/+≡⌵/-
+Input ← (
+  ⊜∘ ⊸≠@\n &fras "./uiua/aoc2024/inputs/01.txt"
+  ∵⋕≡(⊜□ ⊸≠@ )
+  °⊟⍉)
 
-#  part ii
-⊜∘ ⊸≠@\n &fras "./uiua/aoc2024/inputs/01.txt"
-∵⋕≡(⊜□ ⊸≠@ )
-⊙:.°⊟⍉
+# part i
+Input
+∩(⊏⊸⍏)
+/+≡⌵-
+
+# part ii
+Input
+⊙:.
 /+×≡/+⊞=
