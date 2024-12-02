@@ -1,45 +1,16 @@
-Input ← (
-  ⊜(□⊜⋕⊸≠@ )⊸≠@\n &fras "./uiua/aoc2024/inputs/02.txt"
-)
+Input ← ⊜(□⊜⋕⊸≠@ )⊸≠@\n &fras "./uiua/aoc2024/inputs/02.txt"
 
-Diffs ← (
-  .
-  (□↘ 1°□)
-  :
-  (□⇌↘1⇌°□)
-  -
-)
-Bounded ← (
-  ⌵
-  ≤3.
-  ≥1:
-  ×
-  (□/×°□))
-AllNeg ← (
-  ±
-  (□/×°□)(<0)
-)
-AllPos ← (
-  ±
-  (□/×°□)(>0)
-)
-
-Check ← (
-  ×↥AllPos:AllNeg.:Bounded.Diffs
-)
+Diffs   ← -(□⇌↘1⇌°□)⟜(□↘ 1°□)
+Bounded ← (□/×°□)×≥1:≤3.⌵
+AllNeg  ← (□/×°□)(<0)±
+AllPos  ← (□/×°□)(>0)±
+Check   ← ×↥AllPos ⟜AllNeg ⟜Bounded Diffs
+Drops   ← ≡▽⊙¤¬⊞=.⇡⧻.
 
 # day i
 Input
-≡Check
-/+
-
-Drops ← (
-  ¬⊞=.⇡⧻.
-  ≡▽⊙¤
-)
+°□/+≡Check
 
 # day ii
 Input
-≡(□Drops °□)
-≡(/↥≡Check °□)
-/+
+°□/+≡(/↥≡Check Drops °□)
