@@ -6,12 +6,7 @@ Diag ← ⊡⍉⊟.⇡⧻.
 IsEitherXMAS ← +⊃(≍"XMAS")(≍"SAMX")
 
 Input
-⟜(/+≡(/+≡(IsEitherXMAS)◫4))
-⟜(/+≡(/+≡(IsEitherXMAS)◫4))⍉
-⟜(/+≡(IsEitherXMAS Diag)♭₃◫4_4)
-⟜(/+≡(IsEitherXMAS Diag ⇌)♭₃◫4_4)
-◌
-+++
++⊃((+∩(/+≡(/+≡(IsEitherXMAS)◫4))⟜⍉))(/+≡(+∩(IsEitherXMAS Diag) ⟜⇌)♭₃◫4_4)
 
 # part ii
 IsEitherMAS ← ↥⊃(≍"MAS")(≍"SAM")
