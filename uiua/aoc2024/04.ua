@@ -41,3 +41,19 @@ Input
 ⟜(/+≡XMASes)
 /+≡(XMASes ⇌)
 +++++++
+
+Diag ← ⊡⍉⊟.⇡⧻.
+
+IsXMAS ← (
+  ↥⊃(≍"MAS")(≍"SAM")Diag.
+  :
+  ≡⇌
+  ↥⊃(≍"MAS")(≍"SAM")Diag
+  ↧
+)
+
+# part ii
+Input
+◫3_3
+♭₃
+/+≡IsXMAS
