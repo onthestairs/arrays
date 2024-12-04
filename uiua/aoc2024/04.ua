@@ -3,21 +3,18 @@ Input ← ⊜∘⊸≠@\n &fras "./uiua/aoc2024/inputs/04.txt"
 Diag ← ⊡⍉⊟.⇡⧻.
 
 # part i
+IsEitherXMAS ← +⊃(≍"XMAS")(≍"SAMX")
+
 Input
-⟜(/+≡(/+≡(+⊃(≍"XMAS")(≍"SAMX"))◫ 4))
-⟜(/+≡(/+≡(+⊃(≍"XMAS")(≍"SAMX"))◫ 4))⍉
-⟜(/+≡(+⊃(≍"XMAS")(≍"SAMX")Diag)♭₃◫4_4)
-⟜(/+≡(+⊃(≍"XMAS")(≍"SAMX")Diag ⇌)♭₃◫4_4)
+⟜(/+≡(/+≡(IsEitherXMAS)◫4))
+⟜(/+≡(/+≡(IsEitherXMAS)◫4))⍉
+⟜(/+≡(IsEitherXMAS Diag)♭₃◫4_4)
+⟜(/+≡(IsEitherXMAS Diag ⇌)♭₃◫4_4)
 ◌
 +++
 
-IsMASCross ← (
-  ↥⊃(≍"MAS")(≍"SAM")Diag.
-  ≡⇌:
-  ↥⊃(≍"MAS")(≍"SAM")Diag
-  ↧
-)
-
 # part ii
+IsEitherMAS ← ↥⊃(≍"MAS")(≍"SAM")
+
 Input
-/+≡IsMASCross♭₃◫3_3
+/+≡(↧⊃(IsEitherMAS Diag≡⇌)(IsEitherMAS Diag))♭₃◫3_3
