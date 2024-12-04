@@ -1,59 +1,23 @@
-Input      ← ⊜∘⊸≠@\n &fras "./uiua/aoc2024/inputs/04.txt"
-XMASes     ← ⧻ regex "XMAS"
-CreateDiag ← (
-  :
-  .
-  ⇡⧻
-  .
-  ⊙⊙:
-  ⊙:
-  :
-  +
-  :
-  ⍉⊟
-  .
-  ↧⊃(≥0)(<140)
-  ≡/↧
-  ▽
-  ⊡
-)
-
-# part i
-Input
-⟜(/+≡XMASes)
-⟜(/+≡(XMASes ⇌))
-⟜(/+≡XMASes ⍉)
-⟜(/+≡(XMASes ⇌) ⍉)
-.
-⟜(⊂⊃(×¯1⇌↘1)(∘)⇡⧻)
-¤
-:
-≡(□CreateDiag)
-⟜(/+≡XMASes)
-/+≡(XMASes ⇌)
-⊙:
-:
-≡⇌
-⟜(⊂⊃(×¯1⇌↘1)(∘)⇡⧻)
-¤
-:
-≡(□CreateDiag)
-⟜(/+≡XMASes)
-/+≡(XMASes ⇌)
-+++++++
+Input ← ⊜∘⊸≠@\n &fras "./uiua/aoc2024/inputs/04.txt"
 
 Diag ← ⊡⍉⊟.⇡⧻.
 
-IsXMAS ← (
+# part i
+Input
+⟜(/+≡(/+≡(+⊃(≍"XMAS")(≍"SAMX"))◫ 4))
+⟜(/+≡(/+≡(+⊃(≍"XMAS")(≍"SAMX"))◫ 4))⍉
+⟜(/+≡(+⊃(≍"XMAS")(≍"SAMX")Diag)♭₃◫4_4)
+⟜(/+≡(+⊃(≍"XMAS")(≍"SAMX")Diag ⇌)♭₃◫4_4)
+◌
++++
+
+IsMASCross ← (
   ↥⊃(≍"MAS")(≍"SAM")Diag.
-  :
-  ≡⇌
+  ≡⇌:
   ↥⊃(≍"MAS")(≍"SAM")Diag
   ↧
 )
 
 # part ii
 Input
-◫3_3
-♭₃
-/+≡IsXMAS
+/+≡IsMASCross♭₃◫3_3
