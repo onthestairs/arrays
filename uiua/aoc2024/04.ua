@@ -10,6 +10,7 @@ Input
 
 # part ii
 IsEitherMAS ← ↥⊃(≍"MAS")(≍"SAM")
+IsCrossMAS  ← IsEitherMAS Diag
 
 Input
-/+≡(↧⊃(IsEitherMAS Diag≡⇌)(IsEitherMAS Diag))♭₃◫3_3
+/+≡(↧⊃(IsCrossMAS≡⇌)(IsCrossMAS))♭₃◫3_3
