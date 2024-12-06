@@ -1,4 +1,4 @@
-Input ← ⊜∘ ⊸≠@\n &fras "./uiua/aoc2024/inputs/06-mini.txt"
+Input ← ⊜∘ ⊸≠@\n &fras "./uiua/aoc2024/inputs/06.txt"
 
 RotateRight ← ⊟:(×¯1)⊃⊢⊣
 
@@ -31,46 +31,8 @@ Input
 N
 ↯ ∞_2[]
 DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
-DoMove
+⍢(DoMove|⍣(1◌◌◌◌DoMove)0)
+◴
+⧻
++1
+⊙(◌◌◌)
