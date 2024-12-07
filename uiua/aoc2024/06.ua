@@ -17,24 +17,29 @@ GetDirection ← (
 Move ← ⊙(+).
 
 DoMove ← (
-  ⊂⊙,
-  ⊙(Move⊙◌◡GetDirection)
+  ⊙,
+  ⊙⊙(Move⊙◌◡GetDirection)
+  ⊙⊟⊙⊙,
+  ⊂
 )
 
-# IsInBounds ← ⊙◌ ↧/↧:/↧>0:<:,△,? +⊙◌◡GetDirection ◌
-IsInBounds ← ↧/↧:/↧ ≥0 ⊙>. ⊙△ + ◌
+IsInBounds ← ↧/↧:/↧≥0⊙>.⊙△+◌
+
+GetStartingCoord ← (
+  ⟜(°⊡)
+  ="^"
+  ⊓(♭)(♭₂)
+  ♭▽)
+
+GetPath ← (
+  N
+  ↯ ∞_2_2[]
+  ⍢(DoMove|IsInBounds)
+)
 
 Input
-⟜(°⊡)
-="^"
-⊓(♭)(♭₂)
-♭▽
-N
-↯ ∞_2[]
-# ⍥(DoMove)5100
-# ⍜⇌ (↙ 100)
-# ↘ 49900
-⍢(DoMove|IsInBounds)
+GetStartingCoord
+GetPath
 ◴
 ⧻
 +1
