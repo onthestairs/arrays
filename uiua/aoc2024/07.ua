@@ -7,19 +7,31 @@ Input ← (
   ≡(□(⊜⋕ ⊸≠" ") °□)
 )
 
-HeadPlus  ← ⊂:⊙+:°⊂:°⊂
-HeadMul   ← ⊂:⊙×:°⊂:°⊂
-Collapse₁ ← ⊟⊃(HeadPlus)(HeadMul)
+Concat ← ⋕⊂∩(°⋕)
 
-Calcs ← ⍢(♭₂≡Collapse₁)(>1⊣△)
+HeadPlus   ← ⊂:⊙+:°⊂:°⊂
+HeadMul    ← ⊂:⊙×:°⊂:°⊂
+HeadConcat ← ⊂:⊙(Concat:):°⊂:°⊂
+Collapse₁  ← ⊟⊃(HeadPlus)(HeadMul)
+Collapse₂  ← ⊂⊟⊃⊃(HeadPlus)(HeadMul)(HeadConcat)
+
+Calcs₁ ← ⍢(♭₂≡Collapse₁)(>1⊣△)
+Calcs₂ ← ⍢(♭₂≡Collapse₂)(>1⊣△)
+
+CheckAnswers ← (
+  ⍉⊟
+  ≡(∈:°□⊣:♭°□⊢.)
+  /+▽
+)
 
 # part i
-# Calcs [11_6_16_20]
 Input
 ⊙.
-≡(□ Calcs ¤ °□)
-⊟
-⍉
-≡(∈ : °□⊣ : ♭°□⊢ .)
-▽
-/+
+≡(□Calcs₁¤°□)
+CheckAnswers
+
+# part ii
+Input
+⊙.
+≡(□Calcs₂¤°□)
+CheckAnswers
