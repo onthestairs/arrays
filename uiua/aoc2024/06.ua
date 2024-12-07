@@ -23,7 +23,10 @@ DoMove ← (
   ⊂
 )
 
-IsInBounds ← ↧/↧:/↧≥0⊙>.⊙△+◌
+BadMove ← [¯1_¯1 ¯1_¯1]
+DropEnd ← ⇌↘1⇌
+
+IsInBounds ← ↥∈DropEnd⟜(⍣⊣BadMove) ⊙(↧/↧:/↧≥0⊙>.⊙△+)
 
 GetStartingCoord ← (
   ⟜(°⊡)
@@ -37,10 +40,17 @@ GetPath ← (
   ⍢(DoMove|IsInBounds)
 )
 
+#  part i
 Input
 GetStartingCoord
 GetPath
+≡⊢
 ◴
 ⧻
 +1
 ⊙(◌◌◌)
+
+# part ii
+# Input
+# GetStartingCoord
+# GetPath
