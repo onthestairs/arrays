@@ -10,18 +10,19 @@ W ← [0 ¯1]
 MaybeRotate ← ⍥(RotateRight)(=@#)
 
 GetDirection ← (
-  .
-  ⍜◌(⊡+)
-  :
+  :⊙(⊡+).
   MaybeRotate
 )
 
-Move ← ⍜◌(+).
+Move ← ⊙(+).
 
 DoMove ← (
-  ⊂⍜(◌):⍜(◌◌).
-  ⍜◌(Move⍜(◌)◌◡GetDirection)
+  ⊂⊙,
+  ⊙(Move⊙◌◡GetDirection)
 )
+
+# IsInBounds ← ⊙◌ ↧/↧:/↧>0:<:,△,? +⊙◌◡GetDirection ◌
+IsInBounds ← ↧/↧:/↧ ≥0 ⊙>. ⊙△ + ◌
 
 Input
 ⟜(°⊡)
@@ -30,8 +31,10 @@ Input
 ♭▽
 N
 ↯ ∞_2[]
-DoMove
-⍢(DoMove|⍣(1◌◌◌◌DoMove)0)
+# ⍥(DoMove)5100
+# ⍜⇌ (↙ 100)
+# ↘ 49900
+⍢(DoMove|IsInBounds)
 ◴
 ⧻
 +1
