@@ -26,7 +26,7 @@ DoMove ← (
 BadMove ← [¯1_¯1 ¯1_¯1]
 DropEnd ← ⇌↘1⇌
 
-IsInBounds ← ↥∈DropEnd⟜(⍣⊣BadMove) ⊙(↧/↧:/↧≥0⊙>.⊙△+)
+IsInBounds ← ↧¬∈DropEnd⟜(⍣⊣BadMove) ⊙(↧/↧:/↧≥0⊙>.⊙△+)
 
 GetStartingCoord ← (
   ⟜(°⊡)
@@ -41,16 +41,43 @@ GetPath ← (
 )
 
 #  part i
-Input
-GetStartingCoord
-GetPath
-≡⊢
-◴
-⧻
-+1
-⊙(◌◌◌)
-
-# part ii
 # Input
 # GetStartingCoord
 # GetPath
+# ≡⊢
+# ◴
+# ⧻
+# +1
+# ⊙(◌◌◌)
+
+PlaceBlock ← ⍜⊡(@#◌)
+
+IsPathLoop ← ≠∩⧻⟜◴
+
+IsLoop ← (
+  Input
+  :
+  PlaceBlock
+  GetStartingCoord
+  GetPath
+  ⊙(◌◌◌)
+  IsPathLoop
+)
+
+# part ii
+Input
+GetStartingCoord
+GetPath
+⊙(◌◌◌)
+≡⊣
+Input
+GetStartingCoord
+⊙◌
+⊙.
+¤
+:
+▽¬≡/↧=
+◴
+≡IsLoop.
+▽
+⧻
