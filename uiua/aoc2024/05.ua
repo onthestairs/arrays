@@ -14,7 +14,7 @@ Deps          ← ▽⊓(♭)(♭₂)⊃LowerTriangle Befores
 Eq              ← ≍°⊟
 AnyEq           ← /↥≡Eq
 ContainsAnyFrom ← (
-  ⊞⊟ : ≡¤ : ≡¤
+  ⊞⊟:≡¤:≡¤
   ≡(AnyEq ↯∞_2_2)
 )
 
@@ -22,14 +22,7 @@ Median ← ⊢↘⌊÷2:⟜⧻
 
 #  part i
 Input
-:⟜(≡(□Deps °□))
-⊙:
-:
-≡⇌
-¤
-:
+:↙3⟜(≡(□Deps °□))
+:¤≡⇌:⊙:
 ⊞(/↥ContainsAnyFrom (≡°□))
-¬♭
-▽
-≡(Median °□)
-/+
+/+≡(Median °□)▽¬♭
